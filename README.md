@@ -6,7 +6,7 @@ A comprehensive machine learning project for detecting fraudulent credit card tr
 
 This project tackles the critical challenge of credit card fraud detection by combining a **synthetic dataset** (providing rich feature interpretability like Location and Merchant) with a real-world **European PCA dataset** (providing high-quality anonymized fraud patterns).
 
-The system analyzes transaction patterns, handles extreme class imbalance (fraud < 1%), and deploys trained models via a user-friendly **PyQt5 Desktop Application**.
+The system analyzes transaction patterns, handles extreme class imbalance (fraud < 1%).
 
 ## 🚀 Key Features
 
@@ -20,7 +20,6 @@ The system analyzes transaction patterns, handles extreme class imbalance (fraud
     *   XGBoost
     *   K-Nearest Neighbors (KNN)
     *   Support Vector Classifier (SVC)
-*   **Interactive Deployment:** a PyQt5 GUI app for real-time fraud scoring.
 
 ## 📊 Model Performance
 
@@ -50,7 +49,7 @@ cd <repo-name>
 
 ### 2. Install Dependencies
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost pyqt5 joblib
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost 
 ```
 
 ### 3. Download Data
@@ -58,8 +57,6 @@ The `creditcard.csv` file exceeds GitHub's file size limits and is not included 
 1.  Download the dataset from Kaggle: [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 2.  Unzip the file and place `creditcard.csv` inside the `Data/` folder.
 
-
-## 🖥️ Usage
 
 ### 🔬 Research & Analysis
 To see the full data analysis, visualization, and model training process:
@@ -69,23 +66,10 @@ To see the full data analysis, visualization, and model training process:
     ```
 2.  Run all cells to reproduce the analysis.
 
-### 📱 Running the App (Fraud Detector)
-To launch the desktop application for real-time prediction:
-1.  Ensure you have trained the models first (run `train_models.py` if models are missing from `models/` directory).
-2.  Start the app:
-    ```bash
-    python app.py
-    ```
-3.  Enter transaction details (Amount, Time, Type, Location) and click **Analyze**.
-
 ## 📂 Project Structure
 
 *   `Machine_Learning_improved.ipynb` - Main notebook for EDA, preprocessing, and model evaluation.
-*   `app.py` - PyQt5 desktop application for inference.
-*   `train_models.py` - Script to operationalize model training and save artifacts.
-*   `models/` - Directory containing trained model files (.joblib, .json) and metadata.
 *   `Data/` - Contains the dataset CSVs.
-*   `styles.qss` - Stylesheet for the GUI.
 
 ## 📝 License
 This project is open-source. Feel free to use and modify.
